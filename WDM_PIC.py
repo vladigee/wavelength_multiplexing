@@ -38,7 +38,7 @@ mzi_rc=c<<cells.mzi_rc(18.3114)
 
 
 gc1.drotate(180)
-gc1.dmove((-100,20))
+gc1.dmove((-100,200))
 
 #cou_ring.rotate(180)
 #cou_ring.dmove((70,0))
@@ -59,14 +59,13 @@ gc6.dmove((4000,100))
 #18.31 um  output 1.547   other 1.53 1.56
 
 #Connect both MMI
-route = tech.route_bundle(c,[gc1.ports["o1"]],[mzi_rc.ports["o1"]])
+route = tech.route_bundle_rc(c,[gc1.ports["o1"]],[mzi_rc.ports["o1"]],cross_section="xs_rc")
 #route2=tech.route_bundle(c,[gc2.ports["o1"]],[mzi_rc.ports["o2"]],cross_section="xs_rc")
-route3 =tech.route_bundle(c,[mzi_rc.ports["o2"]],[gc5.ports["o1"]])
-route4=tech.route_bundle(c,[gc3.ports["o1"]],[ring.ports["o2"]])
-route5=tech.route_bundle(c,[gc4.ports["o1"]],[ring.ports["o1"]])
-route6=tech.route_bundle(c,[mzi_rc.ports["o3"]],[st_line.ports["o1"]])
-route7=tech.route_bundle(c,[st_line.ports["o2"]],[gc6.ports["o1"]])
-
+route3 =tech.route_bundle_rc(c,[mzi_rc.ports["o2"]],[gc5.ports["o1"]],cross_section="xs_rc")
+route4=tech.route_bundle_rc(c,[gc3.ports["o1"]],[ring.ports["o2"]],cross_section="xs_rc")
+route5=tech.route_bundle_rc(c,[gc4.ports["o1"]],[ring.ports["o1"]],cross_section="xs_rc")
+route6=tech.route_bundle_rc(c,[mzi_rc.ports["o3"]],[st_line.ports["o1"]],cross_section="xs_rc")
+route7=tech.route_bundle_rc(c,[st_line.ports["o2"]],[gc6.ports["o1"]],cross_section="xs_rc")
 
 
 #Create input and output ports
