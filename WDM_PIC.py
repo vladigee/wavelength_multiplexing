@@ -26,8 +26,8 @@ gc6= c<< cells.grating_coupler_elliptical(cross_section="xs_rc")
 #cou= c<<cells.coupler()
 #cou_ring=c<<cells.coupler_ring_sc(0,10,4)
 
-st_line=c<<cells.straight(160,cross_section="xs_rc")
-ring=c<<cells.ring_single_sc(0.2,26.9238,50,50,cross_section="xs_rc")
+st_line=c<<cells.straight(1600,cross_section="xs_rc")
+ring=c<<cells.ring_single_sc(0.2,26.838,50,50,cross_section="xs_rc")
 mzi_rc=c<<cells.mzi_rc(18.3114)
 
 #mmi1=c << cells.mmi1x2()
@@ -46,14 +46,14 @@ gc1.dmove((-100,20))
 #gc2.dmove((-100,-50))
 
 
-mzi_rc.dmove((20,0))
-st_line.dmove((300,-40))
-ring.dmove((380,-145.15))
-gc3.dmove((480,-280))
+mzi_rc.dmove((400,0))
+st_line.dmove((700,-40))
+ring.dmove((1700,-145.15))
+gc3.dmove((4000,-1200))
 gc4.rotate(180)
-gc4.dmove((-100,-200))
-gc5.dmove((480,140))
-gc6.dmove((480,-60))
+gc4.dmove((-100,-500))
+gc5.dmove((4000,1200))
+gc6.dmove((4000,100))
 
 #mmi2.move((100,20))
 #18.31 um  output 1.547   other 1.53 1.56
